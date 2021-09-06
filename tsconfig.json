@@ -6,7 +6,8 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns": false,
+    "strictPropertyInitialization": false,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
@@ -16,11 +17,39 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
+        "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "paths": {
+      "rxjs": [
+        "node_modules/rxjs"
+      ],
+      "rxjs/*": [
+        "node_modules/rxjs/*"
+      ]
+    },
     "lib": [
       "es2018",
       "dom"
     ]
   },
+  // "compilerOptions": {
+  //   "noImplicitAny": true,
+  //   "noImplicitThis": true,
+  //   "alwaysStrict": true,
+  //   "strictNullChecks": true,
+  //   "strictFunctionTypes": true,
+  //   "paths": {
+  //     "rxjs": [
+  //       "node_modules/rxjs"
+  //     ],
+  //     "rxjs/*": [
+  //       "node_modules/rxjs/*"
+  //     ]
+  //   }
+  // },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

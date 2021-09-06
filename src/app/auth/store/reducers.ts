@@ -1,6 +1,6 @@
 import { Action, createReducer, on } from '@ngrx/store';
 
-import { registerAction } from './actions';
+import { registerAction } from './action/register.actions';
 import { AuthStateInterface } from './../types/authState.interface';
 
 const initialState: AuthStateInterface = {
@@ -19,7 +19,5 @@ const authReducer = createReducer(
 );
 
 export function reducers(state: AuthStateInterface, action: Action){
-  console.log("here");
-
   return authReducer(state, action)
 }
