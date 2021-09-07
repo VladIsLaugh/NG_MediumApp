@@ -1,3 +1,5 @@
+import { PersistanceService } from './../shared/services/persistence.service';
+import { BackendErrorMessagesModule } from './../shared/modules/backendErrorMessages/backendErrorMessages.module';
 import { StoreModule } from '@ngrx/store';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -24,8 +26,9 @@ const routes = [
     StoreModule.forFeature('auth', reducers),
     EffectsModule.forFeature([RegisterEffect]),
     ReactiveFormsModule,
+    BackendErrorMessagesModule
   ],
   declarations: [RegisterComponent],
-  providers: [AuthService],
+  providers: [AuthService, PersistanceService],
 })
 export class AuthModule {}
